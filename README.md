@@ -1,9 +1,9 @@
-# error.log
+# file-error-log
 a package to log errors directly to a error.log file with helpers
 
 ## usage
 ```javascript
-const log = require('error.log')
+const log = require('file-error-log')
 
 await log('something went wrong')
 
