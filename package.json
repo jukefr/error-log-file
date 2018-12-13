@@ -11,8 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/jukefr/error-log-file.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["error",
+  "log",
+  "file",
+  "save",
+  "promise"
+  ],
+  "author": "Kevin Jullien",
   "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/jukefr/error-log-file/issues"

@@ -2,7 +2,7 @@ import { writeFile } from "fs";
 
 const writeFileP = (fileName: string, data: string): Promise<void> =>
   new Promise<void>((resolve, reject) =>
-    writeFile(fileName, data, err => (err ? reject(err) : resolve()))
+    writeFile(fileName, data, {'flag':'a'}, err => (err ? reject(err) : resolve()))
   );
 
 export = async (
@@ -14,5 +14,5 @@ export = async (
 ): Promise<void> =>
   writeFileP(
     fileName,
-    `[${date.getFullYear()}-${date.getMonth()}-${date.getDate()}|${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}] ${log}`
+    `\n[${date.getFullYear()}-${date.getMonth()}-${date.getDate()}|${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}] ${log}`
   );
