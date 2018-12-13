@@ -13,12 +13,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPLv3",
   "bugs": {
     "url": "https://github.com/jukefr/error.log/issues"
   },
   "homepage": "https://github.com/jukefr/error.log#readme",
   "devDependencies": {
+    "@types/node": "^10.12.14",
     "typescript": "^3.2.2"
   }
 }
