@@ -1,0 +1,24 @@
+{
+  "name": "error.log",
+  "version": "0.0.1",
+  "description": "a package to log errors directly to a error.log file with helpers",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jukefr/error.log.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jukefr/error.log/issues"
+  },
+  "homepage": "https://github.com/jukefr/error.log#readme",
+  "devDependencies": {
+    "typescript": "^3.2.2"
+  }
+}
