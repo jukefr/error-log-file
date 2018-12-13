@@ -1,7 +1,7 @@
 {
-  "name": "file-error-log",
-  "version": "0.0.1",
-  "description": "a package to log errors directly to a error.log file with helpers",
+  "name": "error-log-file",
+  "version": "1.0.0",
+  "description": "log errors directly to a 'error.log' file",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jukefr/file-error-log.git"
+    "url": "git+https://github.com/jukefr/error-log-file.git"
   },
   "keywords": [],
   "author": "",
   "license": "GPLv3",
   "bugs": {
-    "url": "https://github.com/jukefr/file-error-log/issues"
+    "url": "https://github.com/jukefr/error-log-file/issues"
   },
-  "homepage": "https://github.com/jukefr/file-error-log#readme",
+  "homepage": "https://github.com/jukefr/error-log-file#readme",
   "devDependencies": {
     "@types/node": "^10.12.14",
     "typescript": "^3.2.2"
