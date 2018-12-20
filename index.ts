@@ -14,5 +14,5 @@ export = async (
 ): Promise<void> =>
   writeFileP(
     fileName,
-    `\n[${date.getFullYear()}-${date.getMonth()}-${date.getDate()}|${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}] ${log}`
+    `\n[${date.getFullYear()}-${date.getMonth()}-${date.getDate()}|${date.getHours()}-${date.getMinutes()}-${date.getSeconds()}] ${log.replace(/(\r\n\t|\n|\r\t)/gm,' ; ')}`
   );
