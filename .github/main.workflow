@@ -1,4 +1,4 @@
-workflow "Build, Test, and Publish" {
+workflow "Install, Build, and Publish" {
   on = "push"
   resolves = ["Publish"]
 }
@@ -14,15 +14,14 @@ action "Build" {
   args = "run build"
 }
 
-# Filter for a new tag
-action "isMaster" {
+action "Master" {
   needs = "Build"
   uses = "actions/bin/filter@master"
   args = "branch master"
 }
 
 action "Publish" {
-  needs = "isMaster"
+  needs = "Master"
   uses = "actions/npm@master"
   args = "publish"
   secrets = ["NPM_AUTH_TOKEN"]
