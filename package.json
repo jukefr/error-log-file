@@ -1,6 +1,6 @@
 {
   "name": "error-log-file",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "log errors directly to a 'error.log' file",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

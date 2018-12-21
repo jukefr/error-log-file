@@ -3,20 +3,20 @@ workflow "Build, Test, and Publish" {
   resolves = ["Publish"]
 }
 
-action "Build" {
+action "Install" {
   uses = "actions/npm@master"
   args = "install"
 }
 
-action "Test" {
-  needs = "Build"
+action "Build" {
+  needs = "Install"
   uses = "actions/npm@master"
-  args = "test"
+  args = "run build"
 }
 
 # Filter for a new tag
 action "Tag" {
-  needs = "Test"
+  needs = "Build"
   uses = "actions/bin/filter@master"
   args = "tag"
 }
@@ -24,6 +24,6 @@ action "Tag" {
 action "Publish" {
   needs = "Tag"
   uses = "actions/npm@master"
-  args = "publish --access public"
+  args = "publish"
   secrets = ["NPM_AUTH_TOKEN"]
 }
