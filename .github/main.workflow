@@ -15,14 +15,14 @@ action "Build" {
 }
 
 # Filter for a new tag
-action "Tag" {
+action "isMaster" {
   needs = "Build"
   uses = "actions/bin/filter@master"
-  args = "tag"
+  args = "branch master"
 }
 
 action "Publish" {
-  needs = "Tag"
+  needs = "isMaster"
   uses = "actions/npm@master"
   args = "publish"
   secrets = ["NPM_AUTH_TOKEN"]
